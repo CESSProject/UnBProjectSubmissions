@@ -1,52 +1,115 @@
-TraceVault – Armazenamento seguro com cadeia de custódia digital e imutável
-O TraceVault é uma aplicação descentralizada (DApp) projetada para permitir que empresas armazenem, consultem e validem documentos de forma segura, auditável e transparente, utilizando blockchain para garantir a integridade e rastreabilidade de cada interação.
+TraceVault – Armazenamento Seguro com Cadeia de Custódia Digital Imutável
 
-A criação de uma solução de cadeia de custódia digital imutável: cada upload, download ou atualização gera um evento registrado na blockchain, impossibilitando alterações não autorizadas e fraudes.
+O TraceVault é uma aplicação descentralizada (DApp) desenvolvida para permitir que empresas armazenem, consultem e validem documentos de forma segura, auditável e transparente, utilizando blockchain para garantir a integridade, autenticidade e rastreabilidade de cada interação.
 
-Problema que o TraceVault resolve
-Empresas que lidam com documentos críticos enfrentam dificuldades como:
+Cada upload, download ou consulta gera um evento registrado na blockchain, criando uma cadeia de custódia digital imutável e protegendo contra fraudes ou alterações não autorizadas.
+
+ Problemas que o TraceVault resolve:
+
+Empresas que lidam com documentos sensíveis enfrentam desafios como:
+
 Risco de perda, alteração ou manipulação de arquivos
+
 Falta de auditoria clara sobre quem acessou ou modificou documentos
-Custos altos com infraestrutura centralizada
-Dependência de servidores tradicionais e vulneráveis
 
-O TraceVault elimina esses problemas fornecidos:
-Auditório completo​, Rastreamento imutável, Transparência​​​
+Altos custos com infraestrutura centralizada
 
-O sistema é dividido em três camadas principais:
+Dependência de servidores tradicionais
 
-Frontend (React + Vite): Permite que o usuário faça upload de arquivos, gere automaticamente o hash criptográfico, consulte, faça download e veja eventos registrados na blockchain.
+Ausência de um histórico confiável de operações
 
+O TraceVault elimina esses riscos oferecendo:
 
-Backend (Node.js + MySQL): Permite que o usuário receba e armazene os arquivos enviados, gerencie e faça uploads/downloads via hash, mantém registro interno das operações dos usuários.
+✔ Auditoria completa
+✔ Rastreamento imutável
+✔ Transparência total das operações
 
+🧩 Arquitetura da Solução
 
-Banco de Dados (MySQL): Armazena o nome original do arquivo, caminho no servidor, hash, tamanho e data de upload.
+O sistema é dividido em três camadas principais, mais o contrato inteligente:
 
+1. Frontend (React + Vite)
 
+Responsável por:
 
-Contrato Inteligente (Solidity – Rede Sepolia): Registra eventos  e mantém histórico imutável na blockchain.
+Upload de arquivos
 
+Geração automática do hash criptográfico
 
+Consulta de documentos
 
-Como Rodar o Projeto Localmente?
+Download
 
-Pré -requisitos: Node.js, MYSQL em execução, NPM e metamask configurada na rede espolia.
+Exibição dos eventos registrados na blockchain
 
+2. Backend (Node.js + Express + MySQL)
 
-Backend:
+Gerencia:
 
-backend de CD
+Recebimento e armazenamento de arquivos
+
+Operações de upload/download usando hash
+
+Registro interno de ações dos usuários
+
+Comunicação com o banco de dados
+
+3. Banco de Dados (MySQL)
+
+Armazena:
+
+Nome original do arquivo
+
+Caminho no servidor
+
+Hash
+
+Tamanho
+
+Data de upload
+
+4. Contrato Inteligente (Solidity – Rede Sepolia)
+
+Responsável por:
+
+Registrar eventos de upload, download e consulta
+
+Manter histórico imutável na blockchain
+
+Garantir integridade e rastreabilidade dos documentos
+
+▶️ Como rodar o projeto localmente
+📌 Pré-requisitos
+
+Node.js instalado
+
+NPM instalado
+
+MySQL em execução
+
+Metamask configurada na rede Sepolia
+
+📦 Backend
+1. Acesse a pasta:
+cd backend
+
+2. Instale dependências:
 npm install
-rode node server.js
 
-Localhost: http://localhost:3000
+3. Rode o servidor:
+node server.js
 
+✔ Backend disponível em: http://localhost:3000
 
-
-Front-end:
-
+🖥️ Frontend
+1. Acesse a pasta:
 cd tracevault-frontend
+
+2. Instale dependências:
 npm install
+
+3. Rode o projeto:
 npm run dev
-Localhost: http://localhost:5173
+
+✔ Frontend disponível em: http://localhost:5173
+
