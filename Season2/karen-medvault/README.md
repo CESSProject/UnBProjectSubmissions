@@ -138,7 +138,6 @@ This mechanism creates a **transparent and immutable audit trail**, strengthenin
 MedVault is designed as a **living project**, guided by a clear and responsible vision for future growth.
 
 ## 🩺 Professional Doctor Interface
-###  Doctor Page
 ##  Doctor Page
 ![Doctor Page](images/MedVaultDoctor_Page.png)
 
