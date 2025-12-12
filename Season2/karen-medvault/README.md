@@ -32,14 +32,13 @@ CESS Network plays a fundamental role by providing a **trustless, verifiable, an
 - - -
 
 ## 🧠 Architecture Overview
-##Front end: 
+# Front end: 
 ## 🏠 Front Page
 ![Front Page](images/front-page.png)
 ## 📖 Learn More
 ![Learn More](images/learnmore.png)
 ## ❓ FAQ
 ![FAQ](images/faq.png)
-##For a future improvement, the doctor version of the Dapp
 ## 📊 Dashboard
 ![Dashboard](images/dashboard.png) 
 
@@ -138,8 +137,8 @@ This mechanism creates a **transparent and immutable audit trail**, strengthenin
 
 MedVault is designed as a **living project**, guided by a clear and responsible vision for future growth.
 
-### 🩺 Professional Doctor Interface
-## 🩺 Doctor Page
+## 🩺 Professional Doctor Interface
+### 🩺 Doctor Page
 ![Doctor Page](MedVaultDoctor_page.png)
 
 
