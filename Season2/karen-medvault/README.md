@@ -6,7 +6,7 @@
 
 ## 🌐 Project Vision
 
-**MedVault** is more than a decentralized application — it is a statement about how healthcare data _should_ be treated in the digital age.
+**MedVault** is more than a decentralized application — it is a statement about how healthcare data _should_ be treated in the digital age. It is a tech revolution.
 
 At its core, MedVault exists to restore what has long been taken away from patients: **true ownership and sovereignty over their own medical data**.
 
@@ -16,7 +16,7 @@ Every design decision in MedVault is guided by one principle: **medical data des
 
 - - -
 
-## 🌍 Why MedVault Matters
+##  Why MedVault Matters
 
 Healthcare data breaches, fragmented records, and lack of patient control are not just technical failures — they are ethical failures.
 
@@ -39,40 +39,82 @@ CESS Network plays a fundamental role by providing a **trustless, verifiable, an
 ![Learn More](images/learnmore.png)
 ## ❓ FAQ
 ![FAQ](images/faq.png)
+##For a future improvement, the doctor version of the Dapp
 ## 📊 Dashboard
-![Dashboard](images/dashboard.png)
-#For a future improvement: 
+![Dashboard](images/dashboard.png) 
 ## 🩺 Doctor Page
 ![Doctor Page](images/doctor-page.png)
 
-### Client-Side Front-End
+### 🧠 Client-Side Front-End (TCESS Network)
 
-The front-end is the heart of MedVault. All cryptography, identity verification, file hashing, and signature generation occur directly in the user’s browser.
+The **Front-End** is the operational core of MedVault and embodies the principle of *patient sovereignty by design*.
 
-### On-Chain Smart Contract
+All essential operations are executed **entirely on the client side**, directly within the user’s browser, eliminating the need for centralized backend servers. This approach ensures that sensitive medical data is never exposed to third-party intermediaries.
 
-The smart contract enforces ownership, permissions, and time-limited access rules. It acts as the immutable source of truth for who owns what and who is allowed to access it.
+Key responsibilities of the Front-End include:
 
-### CESS DeOSS Storage
+- Cryptographic file hashing before any upload operation  
+- Wallet-based identity verification using the **TCESS network**  
+- Secure message signing for CESS DeOSS gateway authorization  
+- Direct interaction with the smart contract deployed on **TCESS (CESS Testnet for EVM)**  
+- Event listening for on-chain auditability and transparency  
 
-Encrypted medical files are stored off-chain using CESS DeOSS, benefiting from fragmentation, geo-redundancy, deduplication, and **PoDR²**.
+By operating on **TCESS**, MedVault leverages a real blockchain environment while maintaining safety for experimentation and continuous improvement. This allows the system to validate real-world behavior, performance, and security assumptions without compromising production-grade infrastructure.
 
-- - -
+This architecture guarantees that **the patient remains the sole custodian of their identity, keys, and data** at all times.
+
+---
+
+### ⛓️ On-Chain Smart Contract (TCESS EVM)
+
+The **Smart Contract**, deployed on the **TCESS EVM-compatible network**, serves as the immutable trust layer of MedVault.
+
+It enforces all business logic related to data ownership and access control, acting as the **single source of truth** for medical data permissions.
+
+Core responsibilities include:
+
+- Binding medical file hashes to patient wallet addresses  
+- Enforcing immutable ownership rules  
+- Managing **time-limited access permissions** for healthcare professionals  
+- Automatically revoking access upon expiration  
+- Emitting events to support transparent and verifiable auditing  
+
+Because the contract runs on **TCESS**, every permission grant, revocation, or access verification is publicly verifiable, cryptographically secured, and resistant to tampering.
+
+This design removes subjective trust and replaces it with **deterministic, auditable logic**, ensuring fairness and accountability for all participants.
+
+---
+
+### 🗄️ CESS DeOSS Storage (Decentralized & Encrypted)
+
+Actual medical files are stored **off-chain** using **CESS DeOSS (Decentralized Object Storage System)**.
+
+Before storage, all files are cryptographically processed on the client side, ensuring that DeOSS nodes never have access to raw, readable medical data.
+
+CESS DeOSS provides the following guarantees:
+
+- **Data fragmentation**, preventing full file reconstruction by a single node  
+- **Geo-redundancy**, increasing availability and resilience  
+- **Deduplication**, optimizing storage efficiency  
+- **PoDR² (Proof of Data Reduplication and Recovery)**, ensuring data integrity and long-term availability  
+
+This separation between **on-chain metadata** and **off-chain encrypted storage** allows MedVault to scale securely while maintaining strong cryptographic guarantees.
+
+---
 
 ## 📤 Secure Upload & On-Chain Registration
 
-Files are uploaded directly from the browser to CESS DeOSS, authenticated through cryptographic signatures — without exposing private keys.
+MedVault implements a **direct, trust-minimized upload flow** between the client and CESS DeOSS.
 
-```
+Files are uploaded **straight from the user’s browser** to the DeOSS gateway, authenticated through cryptographic signatures derived from the user’s wallet on **TCESS**.
+
+```bash
 PUT /file
 # Required headers:
 # Territory
 # Account
 # Message
 # Signature
-```
-
-After upload, immutable metadata is recorded on-chain, guaranteeing ownership, integrity, and proof-of-existence.
 
 - - -
 
@@ -120,43 +162,5 @@ These improvements aim to make MedVault not only secure, but also welcoming and 
 
 This project is licensed under the **MIT License**.
 
-- - -
-
-# 🇧🇷 MedVault — Cofre de Arquivos Médicos Descentralizados
-
-**Privacidade em primeiro lugar. O paciente no centro. Construído com cuidado. Powered by CESS Network.**
-
-## 🌐 Visão do Projeto
-
-O **MedVault** é mais do que uma aplicação descentralizada — é uma declaração sobre como os dados de saúde _devem_ ser tratados na era digital.
-
-Em sua essência, o MedVault existe para devolver aos pacientes algo fundamental: **a verdadeira soberania sobre seus próprios dados médicos**.
-
-Ao combinar o **Armazenamento Descentralizado Criptografado (DeOSS)** da CESS Network com **Smart Contracts compatíveis com EVM**, o MedVault elimina servidores centrais, intermediários opacos e suposições de confiança que historicamente colocam dados médicos em risco.
-
-Cada decisão de design do MedVault é guiada por um princípio: **dados médicos merecem o mesmo nível de proteção, dignidade e transparência que a vida humana**.
-
-## 🌍 Por que o MedVault é Importante
-
-Vazamentos de dados, prontuários fragmentados e a falta de controle do paciente não são apenas falhas técnicas — são falhas éticas.
-
-O MedVault enfrenta esses problemas oferecendo:
-
-*   **Soberania do Paciente** — Propriedade garantida criptograficamente.
-*   **Arquitetura Zero Trust** — Sem backend centralizado.
-*   **Transparência e Auditoria** — Todo acesso é verificável.
-*   **Resiliência** — Baseado em blockchain e armazenamento descentralizado.
-
-## 🚀 Melhorias Futuras
-
-O MedVault foi concebido como um projeto vivo, com evolução contínua.
-
-O próximo grande passo é a implementação da **Interface Profissional do Médico**, permitindo colaboração segura, ética e transparente entre pacientes e profissionais de saúde.
-
-Com a integração do **CESS PReT** e melhorias de usabilidade, o MedVault se consolida como um modelo de referência para a saúde descentralizada.
-
-## 📄 Licença
-
-Este projeto está licenciado sob a **Licença MIT**.
 
 
