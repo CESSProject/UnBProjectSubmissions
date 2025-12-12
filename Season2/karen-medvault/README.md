@@ -32,7 +32,7 @@ CESS Network plays a fundamental role by providing a **trustless, verifiable, an
 - - -
 
 ## 🧠 Architecture Overview
-#Front end: 
+##Front end: 
 ## 🏠 Front Page
 ![Front Page](images/front-page.png)
 ## 📖 Learn More
@@ -42,8 +42,7 @@ CESS Network plays a fundamental role by providing a **trustless, verifiable, an
 ##For a future improvement, the doctor version of the Dapp
 ## 📊 Dashboard
 ![Dashboard](images/dashboard.png) 
-## 🩺 Doctor Page
-![Doctor Page](images/doctor-page.png)
+
 
 ### 🧠 Client-Side Front-End (TCESS Network)
 
@@ -104,17 +103,18 @@ This separation between **on-chain metadata** and **off-chain encrypted storage*
 
 ## 📤 Secure Upload & On-Chain Registration
 
-MedVault implements a **direct, trust-minimized upload flow** between the client and CESS DeOSS.
+MedVault implements a **direct, trust-minimized upload flow** between the client and **CESS DeOSS**.
 
-Files are uploaded **straight from the user’s browser** to the DeOSS gateway, authenticated through cryptographic signatures derived from the user’s wallet on **TCESS**.
+Files are uploaded **straight from the user’s browser** to the DeOSS gateway, authenticated through **cryptographic signatures** derived from the user’s wallet on the **TCESS network**.
 
-```bash
+```
 PUT /file
 # Required headers:
 # Territory
 # Account
 # Message
 # Signature
+```
 
 - - -
 
@@ -122,45 +122,47 @@ PUT /file
 
 MedVault allows patients to grant **temporary, revocable access** to healthcare professionals.
 
-Access automatically expires, eliminating forgotten permissions and reducing long-term exposure risks.
+Access permissions **automatically expire**, eliminating forgotten authorizations and significantly reducing long-term exposure risks.
 
 - - -
 
 ## 📜 Auditing & Transparency
 
-Every interaction generates smart contract events that can be independently verified. This creates a transparent audit trail that strengthens trust between patients and healthcare professionals.
+Every interaction generates **on-chain smart contract events** that can be independently verified.
+
+This mechanism creates a **transparent and immutable audit trail**, strengthening trust between patients and healthcare professionals through cryptographic accountability.
 
 - - -
 
 ## 🚀 Future Improvements & Roadmap
 
-MedVault is designed as a living project, with a clear vision for future growth.
+MedVault is designed as a **living project**, guided by a clear and responsible vision for future growth.
 
 ### 🩺 Professional Doctor Interface
+## 🩺 Doctor Page
+![Doctor Page](MedVaultDoctor_page.png)
+
 
 One of the most important upcoming improvements is the implementation of a **dedicated Doctor Page**.
 
-This professional interface will allow authorized doctors and institutions to:
+This professional interface will allow authorized doctors and healthcare institutions to:
 
-*   View medical files shared with them by patients
-*   Clearly see access expiration times
-*   Maintain a verifiable access history
+*   View medical files explicitly shared with them by patients
+*   Clearly visualize access expiration times
+*   Maintain a verifiable and immutable access history
 
 ### 🔐 CESS PReT Integration
 
-Future versions will integrate **CESS Proxy Re-Encryption (PReT)**, enabling secure key delegation without exposing private encryption keys.
+Future versions will integrate **CESS Proxy Re-Encryption (PReT)**, enabling secure cryptographic key delegation without exposing private encryption keys or compromising patient privacy.
 
 ### 📊 Advanced Analytics & UX Improvements
 
-Planned enhancements include usability refinements, accessibility improvements, and visual audit dashboards.
+Planned enhancements include usability refinements, accessibility improvements, and intuitive visual audit dashboards.
 
-These improvements aim to make MedVault not only secure, but also welcoming and easy to use for patients and professionals alike.
+These improvements aim to make MedVault not only **secure**, but also **welcoming, transparent, and easy to use** for both patients and healthcare professionals.
 
 - - -
 
 ## 📄 License
 
 This project is licensed under the **MIT License**.
-
-
-
