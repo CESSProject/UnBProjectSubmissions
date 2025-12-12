@@ -1,70 +1,235 @@
-# Getting Started with Create React App
+# <img src="/mnt/data/logo_cortada.png" height="80"/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# **TrustIOT — Decentralized Network Security**
 
-## Available Scripts
+**TrustIOT is a blockchain-powered framework that brings trust, auditability, and cryptographic verification to IoT networks.**
+It ensures device authenticity, secure telemetry validation, and decentralized access control with transparency and zero-trust guarantees.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Active-00c853?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Blockchain-Ethereum%2FSepolia-3C3C3D?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/IoT-Device%20Integrity-18ffff?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/API-REST%20%2F%20Web3-2962ff?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Frontend-React%2BVite-42a5f5?style=for-the-badge"/>
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# 📌 **Overview**
 
-### `npm test`
+TrustIOT provides:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* 🔐 **Decentralized Identity (DID)** for IoT devices
+* 🧾 **Tamper-proof telemetry logs stored on-chain**
+* 🔍 **Real-time verification of device events**
+* 🛡️ **Attack prevention via reputation + trust-scoring**
+* ⚡ Lightweight SDK for microcontrollers
+* 🌐 Dashboard for monitoring contracts, devices, and events
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 🧩 **High-Level Architecture**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+           ┌───────────────────────────┐
+           │        IoT Device         │
+           │  Sensors • Firmware • SDK │
+           └──────────────┬────────────┘
+                          │ Telemetry + Signed Events
+                          ▼
+                ┌─────────────────────┐
+                │  TrustIOT Backend   │
+                │  (Node.js + Web3)   │
+                └────────────┬────────┘
+                             │ Transaction Build & Validation
+                             ▼
+                ┌─────────────────────────┐
+                │  Ethereum Network       │
+                │ (Sepolia / Mainnet)     │
+                └────────────┬────────────┘
+                             │ Event Logs / State Changes
+                             ▼
+                ┌─────────────────────────┐
+                │ TrustIOT Dashboard      │
+                │ (React + Vite + Web3)   │
+                └─────────────────────────┘
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+# 🛡️ **Core Features**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### ✔ Decentralized Device Registry
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Every device is minted as an on-chain entity with signature validation.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### ✔ Secure Telemetry Verification
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Events are hashed → verified → stored immutably.
 
-## Learn More
+### ✔ Role-Based Access
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Admins, Operators, Auditors → each mapped to blockchain permissions.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### ✔ Attack Detection
 
-### Code Splitting
+Suspicious patterns generate blockchain alerts & dashboard warnings.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+# 🏗️ **Project Structure**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+trustiot/
+ ├── backend/            # Node.js API + Web3 services
+ ├── contracts/          # Solidity smart contracts
+ ├── dashboard/          # React (Vite) frontend
+ ├── sdk/                # Lightweight IoT firmware SDK
+ └── README.md
+```
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# 🔧 **Installation**
 
-### Advanced Configuration
+## 1. Clone the repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+git clone https://github.com/your-org/TrustIOT.git
+cd TrustIOT
+```
 
-### Deployment
+## 2. Install dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Backend
 
-### `npm run build` fails to minify
+```bash
+cd backend
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Dashboard
+
+```bash
+cd dashboard
+npm install
+```
+
+---
+
+# 🔐 **Environment Variables**
+
+Create a file named **`TrustIoT.env`** inside the backend folder:
+
+```
+PRIVATE_KEY=YOUR_WALLET_PRIVATE_KEY
+RPC_URL=https://sepolia.infura.io/v3/YOUR_INFURA_KEY
+CONTRACT_ADDRESS=0x....
+```
+
+### Where do I get the private key?
+
+Use a **test wallet**, such as:
+
+* MetaMask (Account → Details → Export Private Key)
+* Rainbow Wallet (Settings → Developer → Export Key)
+
+⚠ Do NOT use your main Ethereum wallet.
+
+---
+
+# ⚙️ **Run the project**
+
+### Backend
+
+```bash
+npm run dev
+```
+
+### Dashboard
+
+```bash
+npm run dev
+```
+
+---
+
+# 📡 **Smart Contract Flow (Diagram)**
+
+```
+           Device
+            │
+            │ 1. Sends data
+            ▼
+     TrustIOT Backend
+            │
+            │ 2. Validates + hashes payload
+            ▼
+     Solidity Contract
+            │
+            │ 3. Emits event + stores hash
+            ▼
+      TrustIOT Dashboard
+```
+
+---
+
+# 🧪 **Testing**
+
+### Contract tests (Hardhat)
+
+```bash
+npm test
+```
+
+---
+
+# 🎨 **Custom Badge Style Guide**
+
+Here are custom badges you can use:
+
+```
+https://img.shields.io/badge/Trust-IoT-00e5ff?style=for-the-badge
+https://img.shields.io/badge/Security-Zero%20Trust-00c853?style=for-the-badge
+https://img.shields.io/badge/Firmware-ESP32%2FESP8266-29b6f6?style=for-the-badge
+https://img.shields.io/badge/Solidity-0.8.x-5c6bc0?style=for-the-badge
+https://img.shields.io/badge/Data-Immutable-ffab00?style=for-the-badge
+```
+
+---
+
+# 📈 **Dashboard Preview (Insert Your Graphs)**
+
+Replace with your IoTGraph.jsx output later:
+
+```
++-----------------------------------------+
+|       Device Telemetry Over Time        |
+|   • Real-time blockchain-verified        |
+|   • Color-adaptive line chart            |
++-----------------------------------------+
+```
+
+---
+
+# 🔮 **Roadmap**
+
+* [ ] Autonomous threat detection engine
+* [ ] zk-Proof for anonymized telemetry
+* [ ] Multi-chain support (Base, Linea, Polygon)
+* [ ] Mobile app (Flutter)
+
+---
+
+# 🤝 **Contributing**
+
+Pull requests are welcome.
+Please open an issue before starting major changes.
+
+---
+
+# 📄 **License**
+
+MIT License © 2025 TrustIOT
