@@ -1,0 +1,13 @@
+{
+  "name": "iot-simulator",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node sim-iot.js"
+  },
+  "dependencies": {
+    "ethers": "^6.8.0",
+    "dotenv": "^16.0.0"
+  }
+}
+
