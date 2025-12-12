@@ -139,7 +139,7 @@ MedVault is designed as a **living project**, guided by a clear and responsible 
 
 ## 🩺 Professional Doctor Interface
 ### 🩺 Doctor Page
-![Doctor Page](MedVaultDoctor_page.png)
+![Doctor Page](MedVaultDoctor_Page.png)
 
 
 One of the most important upcoming improvements is the implementation of a **dedicated Doctor Page**.
