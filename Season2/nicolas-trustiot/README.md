@@ -186,20 +186,6 @@ npm test
 
 ---
 
-# 🎨 **Custom Badge Style Guide**
-
-Here are custom badges you can use:
-
-```
-https://img.shields.io/badge/Trust-IoT-00e5ff?style=for-the-badge
-https://img.shields.io/badge/Security-Zero%20Trust-00c853?style=for-the-badge
-https://img.shields.io/badge/Firmware-ESP32%2FESP8266-29b6f6?style=for-the-badge
-https://img.shields.io/badge/Solidity-0.8.x-5c6bc0?style=for-the-badge
-https://img.shields.io/badge/Data-Immutable-ffab00?style=for-the-badge
-```
-
----
-
 # 📈 **Dashboard Preview (Insert Your Graphs)**
 
 Replace with your IoTGraph.jsx output later:
