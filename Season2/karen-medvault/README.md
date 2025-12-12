@@ -36,7 +36,7 @@ CESS Network plays a fundamental role by providing a **trustless, verifiable, an
 ## 🏠 Front Page
 ![Front Page](images/front-page.png)
 ## 📖 Learn More
-![Learn More](images/learn-more.png)
+![Learn More](images/learnmore.png)
 ## ❓ FAQ
 ![FAQ](images/faq.png)
 ## 📊 Dashboard
