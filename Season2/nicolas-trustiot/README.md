@@ -1,4 +1,6 @@
-# <<img src="public/logo_cortada.png" height="100" />
+#<p align="center">
+  <img src="public/logo_cortada.png" height="140" />
+</p>
 
 # **TrustIOT — Decentralized Network Security**
 
